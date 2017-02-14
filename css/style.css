@@ -1,3 +1,11 @@
+.body {
+  background: grey;
+}
+
+h1 {
+  color: red;
+}
+
 .parent {
   border: 5px solid lightcoral;
 }
@@ -19,10 +27,22 @@
 
 .example-flex .parent {
   display: flex;
+  padding:5px;
 }
 
 .example-flex .item {
-  width: 50px;
+  background: black;
+  width: 150px;
+  height: 200px;
+  line-height: 200px;
+  border-radius: 5%;
+}
+
+.example-flex .item:hover{
+
+  transform: translate(5px,5px);
+
+
 }
 
 
@@ -37,7 +57,18 @@
 }
 
 .example-direction .item {
-  width: 50px;
+  width: 150px;
+  height: 200px;
+  line-height: 200px;
+  border-radius: 5%;
+   -webkit-animation: mymove 5s infinite;
+}
+
+.example-direction .item:hover {
+  width: 150px;
+  height: 200px;
+  line-height: 200px;
+  border-radius: 5%;
 }
 
 
@@ -215,3 +246,7 @@
   align-self: flex-end;
   background: lightgreen;
 }
+
+@-webkit-keyframes mymove {
+    from {background-color: white;}
+    to {background-color: black;}
